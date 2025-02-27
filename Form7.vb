@@ -250,7 +250,7 @@ Public Class Form7
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        Dim delcost As Integer
+        Dim delcost, delamt As Integer
         Dim quer As String = "delete from cust_purchase where cust_id=@custid and med_id=@medid"
         Dim con = New MySqlConnection(constr)
         con.Open()
@@ -261,9 +261,18 @@ Public Class Form7
 
         End With
         delcost = Val(DataGridView1.SelectedRows(0).Cells(4).Value.ToString)
+        delamt = Val(DataGridView1.SelectedRows(0).Cells(2).Value.ToString)
         gtotal = gtotal - delcost
         TextBox7.Text = gtotal
         cmd.ExecuteNonQuery()
+
+        Dim cmd1 As New MySqlCommand
+        cmd1.Connection = con
+        cmd1.CommandText = "update medicine set quantity=quantity+ @quant where med_id=@medid"
+        cmd1.Parameters.AddWithValue("@quant", delamt)
+        cmd1.Parameters.AddWithValue("@medid", DataGridView1.SelectedRows(0).Cells(1).Value.ToString)
+        cmd1.ExecuteNonQuery()
+
         datagridupdate()
         con.Close()
         comboupdate()
