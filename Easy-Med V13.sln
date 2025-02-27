@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Easy-Med V13", "Easy-Med V13.vbproj", "{AC6E7E5B-89E6-410B-9986-A7D7E93A6BED}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Easy-Med V13 Final", "Easy-Med V13 Final.vbproj", "{AC6E7E5B-89E6-410B-9986-A7D7E93A6BED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
