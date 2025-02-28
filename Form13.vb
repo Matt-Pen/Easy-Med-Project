@@ -25,7 +25,7 @@ Public Class Form13
 
             Label8.Text = ctg.ToString
 
-            Dim quer As String = "Select * from medicine where category Like '%" + ctg + "%'"
+            Dim quer As String = "Select med_id as Med_ID, med_name as Name, category, quantity, unit_price from medicine where category Like '%" + ctg + "%'"
             Dim dta = New MySqlDataAdapter(quer, con)
             Dim dt = New DataTable()
             dta.Fill(dt)
@@ -38,7 +38,7 @@ Public Class Form13
             Label10.Visible = True
             Label9.Text = quant.ToString
 
-            Dim quer As String = "select * from medicine where quantity <=" + quant.ToString
+            Dim quer As String = "select med_id as Med_ID, med_name as Name, category, quantity, unit_price from medicine where quantity <=" + quant.ToString
 
             Dim dta = New MySqlDataAdapter(quer, con)
             Dim dt = New DataTable()
@@ -50,7 +50,7 @@ Public Class Form13
             Label9.Visible = False
             Label10.Visible = False
 
-            Dim quer As String = "select * from medicine"
+            Dim quer As String = "select med_id as Med_ID, med_name as Name, category, quantity, unit_price from medicine"
             Dim dta = New MySqlDataAdapter(quer, con)
             Dim dt = New DataTable()
             dta.Fill(dt)

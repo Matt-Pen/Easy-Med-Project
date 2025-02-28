@@ -24,7 +24,7 @@ Public Class Form6
 
         Dim con = New MySqlConnection(constr)
         con.Open()
-        Dim quer As String = "select supplier_pur.sup_id, company, med_id,cost_of_purchase from supplier_pur,supplier_details where supplier_pur.sup_id=supplier_details.sup_id"
+        Dim quer As String = "select supplier_pur.sup_id, company, med_id as Med_ID,cost_of_purchase from supplier_pur,supplier_details where supplier_pur.sup_id=supplier_details.sup_id"
         Dim dta = New MySqlDataAdapter(quer, con)
         Dim dt = New DataTable()
         dta.Fill(dt)

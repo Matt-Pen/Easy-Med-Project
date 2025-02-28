@@ -16,7 +16,7 @@ Public Class Form11
     Public Sub datagridupdate()
         Dim con = New MySqlConnection(constr)
         con.Open()
-        Dim quer As String = "select cust_id, cust_purchase.med_id, med_name, purch_quantity, unit_cost,total_cost from cust_purchase,medicine where medicine.med_id=cust_purchase.med_id order by cust_id"
+        Dim quer As String = "select cust_id, cust_purchase.med_id as Med_ID, med_name as Name, purch_quantity as Quantity, unit_cost,total_cost from cust_purchase,medicine where medicine.med_id=cust_purchase.med_id order by cust_id"
         Dim dta = New MySqlDataAdapter(quer, con)
         Dim dt = New DataTable()
         dta.Fill(dt)
@@ -67,7 +67,7 @@ Public Class Form11
         Else
             Dim con = New MySqlConnection(constr)
             con.Open()
-            Dim quer As String = "select cust_id, cust_purchase.med_id, med_name, purch_quantity, unit_cost,total_cost from cust_purchase,medicine where medicine.med_id=cust_purchase.med_id and cust_id=" + ComboBox1.Text.ToString
+            Dim quer As String = "select cust_id, cust_purchase.med_id as Med_ID, med_name as Name, purch_quantity as Quantity, unit_cost,total_cost from cust_purchase,medicine where medicine.med_id=cust_purchase.med_id and cust_id=" + ComboBox1.Text.ToString
             Dim dta = New MySqlDataAdapter(quer, con)
             Dim dt = New DataTable()
             dta.Fill(dt)

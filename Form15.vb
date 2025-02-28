@@ -75,6 +75,7 @@ Public Class Form15
         readvars()
         datagridinput()
         Label6.Text = Form9.Label6.Text
+        Label12.Text = Form9.Label5.Text
         setreportid()
     End Sub
 
@@ -90,6 +91,9 @@ Public Class Form15
 
         e.HasMorePages = False
     End Sub
+
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.FormBorderStyle = FormBorderStyle.None
         Button1.Visible = False

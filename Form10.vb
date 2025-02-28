@@ -14,7 +14,7 @@ Public Class Form10
 
         Dim con = New MySqlConnection(constr)
         con.Open()
-        Dim quer As String = "select * from medicine"
+        Dim quer As String = "select med_id as Med_ID, med_name as Name, category, quantity, unit_price from medicine"
         Dim dta = New MySqlDataAdapter(quer, con)
         Dim dt = New DataTable()
         dta.Fill(dt)

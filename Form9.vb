@@ -68,38 +68,66 @@ Public Class Form9
     End Sub
 
     Public Sub totalcalc()
-        Dim tcost As Integer
+        Dim stcost, ctcost As Integer
         If fdate <> "" And tdate <> "" Then
             Dim cmd As New MySqlCommand
             Dim con = New MySqlConnection(constr)
             con.Open()
             cmd.Connection = con
-            cmd.CommandText = "select * from payment where date between '" + DateTimePicker1.Text.ToString + "' and '" + DateTimePicker2.Text.ToString + "'"
+            cmd.CommandText = "select * from supplier_details, payment where date between '" + DateTimePicker1.Text.ToString + "' and '" + DateTimePicker2.Text.ToString + "' and payment.sup_id = supplier_details.sup_id"
             Dim dr1 As MySqlDataReader
             dr1 = cmd.ExecuteReader
             Do While dr1.Read
-                tcost += dr1("total_cost")
+                stcost += dr1("total_cost")
 
             Loop
-            Label6.Text = tcost.ToString
+            Label6.Text = stcost.ToString
+            dr1.Close()
+
+            cmd.CommandText = "select * from customer, payment where date between '" + DateTimePicker1.Text.ToString + "' and '" + DateTimePicker2.Text.ToString + "' and payment.cust_id = customer.cust_id"
+            Dim dr2 As MySqlDataReader
+            dr2 = cmd.ExecuteReader
+            Do While dr2.Read
+                ctcost += dr2("total_cost")
+            Loop
+            dr2.Close()
+            Label5.Text = ctcost.ToString
+            stcost = 0
+            ctcost = 0
             con.Close()
         Else
             Dim cmd As New MySqlCommand
             Dim con = New MySqlConnection(constr)
             con.Open()
             cmd.Connection = con
-            cmd.CommandText = "select * from payment"
+            cmd.CommandText = "select * from supplier_details, payment where payment.sup_id = supplier_details.sup_id"
             Dim dr1 As MySqlDataReader
             dr1 = cmd.ExecuteReader
             Do While dr1.Read
-                tcost += dr1("total_cost")
+                stcost += dr1("total_cost")
 
             Loop
-            Label6.Text = tcost.ToString
+            Label6.Text = stcost.ToString
+            dr1.Close()
+
+            cmd.CommandText = "select * from customer, payment where payment.cust_id = customer.cust_id"
+            Dim dr2 As MySqlDataReader
+            dr2 = cmd.ExecuteReader
+            Do While dr2.Read
+                ctcost += dr2("total_cost")
+            Loop
+            dr2.Close()
+            Label5.Text = ctcost.ToString
+            stcost = 0
+            ctcost = 0
             con.Close()
+
+
         End If
 
     End Sub
+
+
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Form15.callfunc()
         Form15.Show()

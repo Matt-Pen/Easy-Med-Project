@@ -292,7 +292,7 @@ Public Class Form7
     Public Sub datagridupdate()
         Dim con = New MySqlConnection(constr)
         con.Open()
-        Dim quer As String = "select * from cust_purchase where cust_id=" + custid
+        Dim quer As String = "select cust_id as Cust_ID, med_id as Med_ID, purch_quantity as Quantity, unit_cost, total_cost from cust_purchase where cust_id=" + custid
         Dim dta = New MySqlDataAdapter(quer, con)
         Dim dt = New DataTable()
         dta.Fill(dt)
