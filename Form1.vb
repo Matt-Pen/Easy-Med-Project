@@ -57,7 +57,7 @@ Public Class Form1
 
                 If user(c) = a Then
 
-                    'TextBox3.Text = "username is True"
+
                     If pass(c) = B Then
                         If desig(c) = "cashier" Then
                             Form7.Button5.Visible = False
@@ -72,7 +72,7 @@ Public Class Form1
                             Form7.Button6.Visible = False
 
                         End If
-                        'TextBox3.Text = " pass its true"
+
                         Me.Hide()
                     Else
                         MessageBox.Show("Password is Incorrect")
@@ -92,9 +92,6 @@ Public Class Form1
         TextBox1.Text = ""
         TextBox2.Text = ""
     End Sub
-
-    'some changes check to git remote
-
 
 
 End Class
