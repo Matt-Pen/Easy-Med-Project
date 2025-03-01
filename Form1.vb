@@ -93,7 +93,7 @@ Public Class Form1
         TextBox2.Text = ""
     End Sub
 
-    'This is Git rename changes check part 2
+    'some changes check to git remote
 
 
 
