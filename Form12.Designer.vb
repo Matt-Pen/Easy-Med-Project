@@ -93,7 +93,7 @@ Partial Class Form12
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(282, 51)
         Me.Button1.TabIndex = 43
-        Me.Button1.Text = "Show All"
+        Me.Button1.Text = "Show All Rows"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label8
