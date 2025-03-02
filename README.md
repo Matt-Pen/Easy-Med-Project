@@ -60,7 +60,7 @@ if there is any.
 
 - c) Payment Reports 
 
-d) Inventory Reports
+- d) Inventory Reports
 
 
 # Screenshots (Form Design)
@@ -178,5 +178,5 @@ d) Inventory Reports
 
 ![8 report id](https://github.com/user-attachments/assets/dad9a7a6-20c2-4a09-bd62-c0b5c850d68a)
 
-
+### will be adding more screenshots with data soon..
 ### Thank you for checking out my project, there are still many improvemnts to be made and hope to do so in the future. Take Care BYE 👋🥳
