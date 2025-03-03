@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Diagnostics.Eventing.Reader
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports MySql.Data.MySqlClient
 Public Class Form7
     Dim constr = "server=localhost; user id=root; password= 0126; database=easy-medicine;"
     Dim custid, custph, orddate As String
@@ -131,11 +133,11 @@ Public Class Form7
         gtotal += n1 * n2
 
         Dim con = New MySqlConnection(constr)
-        Dim quer As String = "insert into cust_purchase(cust_id,med_id,purch_quantity,unit_cost,total_cost)values(@custid,@medid,@quant,@cost,@total)"
         con.Open()
-        Dim cmd = New MySqlCommand(quer, con)
+        Dim cmd As New MySqlCommand
+        cmd.Connection = con
 
-        If (ComboBox1.Text = "" Or ComboBox2.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "") Then
+        If (TextBox4.Text <> "" Or TextBox5.Text <> "" Or TextBox1.Text <> "" Or TextBox6.Text <> "") Then
             Dim dr1 As MySqlDataReader
             cmd.CommandText = "select quantity from medicine where med_id=" + TextBox1.Text
             dr1 = cmd.ExecuteReader
@@ -151,7 +153,10 @@ Public Class Form7
 
             dr1.Close()
             con.Close()
+        Else
+            MessageBox.Show("Enter all the values")
         End If
+
         TextBox7.Text = gtotal.ToString
 
     End Sub
@@ -255,31 +260,38 @@ Public Class Form7
         Dim con = New MySqlConnection(constr)
         con.Open()
         Dim cmd = New MySqlCommand(quer, con)
-        With cmd.Parameters
-            .AddWithValue("@custid", custid)
-            .AddWithValue("@medid", DataGridView1.SelectedRows(0).Cells(1).Value.ToString)
+        Try
+            Dim trydata As String = DataGridView1.SelectedRows(0).Cells(1).Value.ToString
+            If (trydata = "") Then
+                MessageBox.Show("Select a row and make changes")
+            Else
+                With cmd.Parameters
+                    .AddWithValue("@custid", custid)
+                    .AddWithValue("@medid", DataGridView1.SelectedRows(0).Cells(1).Value.ToString)
 
-        End With
-        delcost = Val(DataGridView1.SelectedRows(0).Cells(4).Value.ToString)
-        delamt = Val(DataGridView1.SelectedRows(0).Cells(2).Value.ToString)
-        gtotal = gtotal - delcost
-        TextBox7.Text = gtotal
-        cmd.ExecuteNonQuery()
+                End With
+                delcost = Val(DataGridView1.SelectedRows(0).Cells(4).Value.ToString)
+                delamt = Val(DataGridView1.SelectedRows(0).Cells(2).Value.ToString)
+                gtotal = gtotal - delcost
+                TextBox7.Text = gtotal
+                cmd.ExecuteNonQuery()
 
-        Dim cmd1 As New MySqlCommand
-        cmd1.Connection = con
-        cmd1.CommandText = "update medicine set quantity=quantity+ @quant where med_id=@medid"
-        cmd1.Parameters.AddWithValue("@quant", delamt)
-        cmd1.Parameters.AddWithValue("@medid", DataGridView1.SelectedRows(0).Cells(1).Value.ToString)
-        cmd1.ExecuteNonQuery()
+                Dim cmd1 As New MySqlCommand
+                cmd1.Connection = con
+                cmd1.CommandText = "update medicine set quantity=quantity+ @quant where med_id=@medid"
+                cmd1.Parameters.AddWithValue("@quant", delamt)
+                cmd1.Parameters.AddWithValue("@medid", DataGridView1.SelectedRows(0).Cells(1).Value.ToString)
+                cmd1.ExecuteNonQuery()
 
-        datagridupdate()
-        con.Close()
-        comboupdate()
-        MessageBox.Show("Row deleted")
+                datagridupdate()
+                con.Close()
+                comboupdate()
+                MessageBox.Show("Row deleted")
+            End If
+        Catch
+            MessageBox.Show("Select a row")
+        End Try
     End Sub
-
-
     Public Sub cartclear()
         TextBox1.Text = ""
         TextBox6.Text = ""

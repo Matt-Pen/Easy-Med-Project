@@ -36,12 +36,13 @@ Public Class Form5
             rs = cmd.ExecuteNonQuery()
             If (rs > 0) Then
                 datagridupdate()
+                MessageBox.Show("Row added to database")
             End If
         End If
         comboupdate()
         Cleartext()
         con.Close()
-        MessageBox.Show("Row added to database")
+
     End Sub
     Public Sub datagridupdate()
 
@@ -70,21 +71,25 @@ Public Class Form5
         con.Open()
         Dim cmd As New MySqlCommand
         cmd.Connection = con
+        If (TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "") Then
+            MessageBox.Show("Select a row and make changes")
+        Else
+            With cmd
+                cmd.CommandText = "update Supplier_details set company=@comp,supplier_name=@supname,phone_no=@phone,email=@email where sup_id=@supid"
+                .CommandType = CommandType.Text
+                .Parameters.AddWithValue("@supid", TextBox1.Text)
+                .Parameters.AddWithValue("@comp", TextBox2.Text)
+                .Parameters.AddWithValue("@supname", TextBox3.Text)
+                .Parameters.AddWithValue("@phone", TextBox4.Text)
+                .Parameters.AddWithValue("@email", TextBox5.Text)
+            End With
+            cmd.ExecuteNonQuery()
+            datagridupdate()
+            Cleartext()
+            con.Close()
+            MessageBox.Show("Row updated")
+        End If
 
-        With cmd
-            cmd.CommandText = "update Supplier_details set company=@comp,supplier_name=@supname,phone_no=@phone,email=@email where sup_id=@supid"
-            .CommandType = CommandType.Text
-            .Parameters.AddWithValue("@supid", TextBox1.Text)
-            .Parameters.AddWithValue("@comp", TextBox2.Text)
-            .Parameters.AddWithValue("@supname", TextBox3.Text)
-            .Parameters.AddWithValue("@phone", TextBox4.Text)
-            .Parameters.AddWithValue("@email", TextBox5.Text)
-        End With
-        cmd.ExecuteNonQuery()
-        datagridupdate()
-        Cleartext()
-        con.Close()
-        MessageBox.Show("Row updated")
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs)
@@ -100,16 +105,21 @@ Public Class Form5
         Dim con = New MySqlConnection(constr)
         con.Open()
         Dim cmd = New MySqlCommand(quer, con)
-        With cmd.Parameters
-            .AddWithValue("@supid", TextBox1.Text.Trim())
-        End With
+        If (TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "") Then
+            MessageBox.Show("Select a row and make changes")
+        Else
+            With cmd.Parameters
+                .AddWithValue("@supid", TextBox1.Text.Trim())
+            End With
 
-        cmd.ExecuteNonQuery()
-        datagridupdate()
-        con.Close()
-        comboupdate()
-        Cleartext()
-        MessageBox.Show("Row deleted")
+            cmd.ExecuteNonQuery()
+            datagridupdate()
+            con.Close()
+            comboupdate()
+            Cleartext()
+            MessageBox.Show("Row deleted")
+        End If
+
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click

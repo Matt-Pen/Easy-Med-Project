@@ -52,12 +52,13 @@ Public Class Form4
             rs = cmd.ExecuteNonQuery()
             If (rs > 0) Then
                 datagridupdate()
+                MessageBox.Show("Row added to database")
             End If
         End If
         Cleartext()
         con.Close()
         comboupdate()
-        MessageBox.Show("Row added to database")
+
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -88,9 +89,8 @@ Public Class Form4
             Cleartext()
             con.Close()
             comboupdate()
+            MessageBox.Show("Row updated")
         End If
-        MessageBox.Show("Row updated")
-
 
     End Sub
 
@@ -104,20 +104,24 @@ Public Class Form4
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim quer As String = "delete from medicine where med_id=@medid"
-        Dim con = New MySqlConnection(constr)
-        con.Open()
-        Dim cmd = New MySqlCommand(quer, con)
-        With cmd.Parameters
-            .AddWithValue("@medid", TextBox1.Text.Trim())
-        End With
+        If (TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "") Then
+            MessageBox.Show("Select a row to delete")
+        Else
+            Dim quer As String = "delete from medicine where med_id=@medid"
+            Dim con = New MySqlConnection(constr)
+            con.Open()
+            Dim cmd = New MySqlCommand(quer, con)
+            With cmd.Parameters
+                .AddWithValue("@medid", TextBox1.Text.Trim())
+            End With
 
-        cmd.ExecuteNonQuery()
-        datagridupdate()
-        con.Close()
-        comboupdate()
-        Cleartext()
-        MessageBox.Show("Row deleted")
+            cmd.ExecuteNonQuery()
+            datagridupdate()
+            con.Close()
+            comboupdate()
+            Cleartext()
+            MessageBox.Show("Row deleted")
+        End If
     End Sub
 
 

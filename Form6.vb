@@ -60,16 +60,6 @@ Public Class Form6
 
             End With
 
-
-            'Dim rs As Integer
-            'If (TextBox1.Text = "" Or TextBox2.Text = "") Then
-            '    MessageBox.Show("Please Enter Values in all Boxes")
-            'Else
-            '    rs = cmd.ExecuteNonQuery()
-            '    If (rs > 0) Then
-            '        datagridupdate()
-            '    End If
-            'End If
             cmd.ExecuteNonQuery()
             cmd1.ExecuteNonQuery()
             Cleartext()
