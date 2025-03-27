@@ -36,11 +36,6 @@ Public Class Form1
         Loop
         r = 0
 
-        'TextBox3.AppendText(user(0))
-        'TextBox3.AppendText(user(1))
-        'TextBox3.AppendText(pass(0))
-        'TextBox3.AppendText(pass(1))
-
         dr1.Close()
     End Sub
 
