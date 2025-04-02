@@ -87,7 +87,16 @@ Public Class Form1
         TextBox1.Text = ""
         TextBox2.Text = ""
     End Sub
+
+    Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            SendKeys.Send("{TAB}")
+        End If
+    End Sub
     'My new Canges to EasyMED Test
     'My branch change test
     'Brand new branch text made to ensure that the branch is working and no cross over is happening
+
+
 End Class
