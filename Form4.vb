@@ -171,5 +171,11 @@ Public Class Form4
         Combosearch()
     End Sub
 
+    Private Sub Form4_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            SendKeys.Send("{TAB}")
+        End If
 
+    End Sub
 End Class

@@ -67,7 +67,7 @@ Partial Class Form1
         Me.Button2.MinimumSize = New System.Drawing.Size(192, 43)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(192, 43)
-        Me.Button2.TabIndex = 3
+        Me.Button2.TabIndex = 4
         Me.Button2.Text = "Clear all"
         Me.Button2.UseVisualStyleBackColor = False
         '
@@ -84,7 +84,7 @@ Partial Class Form1
         Me.Button1.MinimumSize = New System.Drawing.Size(275, 43)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(359, 49)
-        Me.Button1.TabIndex = 2
+        Me.Button1.TabIndex = 3
         Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -97,7 +97,7 @@ Partial Class Form1
         Me.Label2.Location = New System.Drawing.Point(63, 148)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(183, 32)
-        Me.Label2.TabIndex = 0
+        Me.Label2.TabIndex = 5
         Me.Label2.Text = "Password"
         '
         'Label1
@@ -109,7 +109,7 @@ Partial Class Form1
         Me.Label1.Location = New System.Drawing.Point(62, 50)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(280, 32)
-        Me.Label1.TabIndex = 2
+        Me.Label1.TabIndex = 5
         Me.Label1.Text = "Enter Username"
         '
         'TextBox2
@@ -122,11 +122,10 @@ Partial Class Form1
         Me.TextBox2.Location = New System.Drawing.Point(68, 189)
         Me.TextBox2.MaximumSize = New System.Drawing.Size(359, 41)
         Me.TextBox2.MinimumSize = New System.Drawing.Size(275, 39)
-        Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(359, 41)
-        Me.TextBox2.TabIndex = 1
+        Me.TextBox2.TabIndex = 2
         '
         'TextBox1
         '
@@ -138,10 +137,9 @@ Partial Class Form1
         Me.TextBox1.Location = New System.Drawing.Point(67, 94)
         Me.TextBox1.MaximumSize = New System.Drawing.Size(359, 41)
         Me.TextBox1.MinimumSize = New System.Drawing.Size(275, 41)
-        Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(359, 41)
-        Me.TextBox1.TabIndex = 0
+        Me.TextBox1.TabIndex = 1
         '
         'Label3
         '
@@ -211,10 +209,10 @@ Partial Class Form1
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Aqua
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Login"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

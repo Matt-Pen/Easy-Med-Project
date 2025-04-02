@@ -22,10 +22,10 @@ Partial Class Form4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -59,37 +59,37 @@ Partial Class Form4
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Navy
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Copperplate Gothic Light", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Cyan
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Cyan
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Copperplate Gothic Light", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Cyan
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Cyan
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Aqua
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Cyan
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Aqua
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Cyan
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.GridColor = System.Drawing.Color.MidnightBlue
         Me.DataGridView1.Location = New System.Drawing.Point(95, 479)
         Me.DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Copperplate Gothic Light", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Cyan
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Cyan
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Copperplate Gothic Light", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Cyan
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Cyan
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.RowHeadersWidth = 51
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Copperplate Gothic Light", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Copperplate Gothic Light", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1331, 624)
@@ -121,7 +121,7 @@ Partial Class Form4
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(245, 51)
-        Me.TextBox2.TabIndex = 3
+        Me.TextBox2.TabIndex = 1
         '
         'TextBox3
         '
@@ -136,7 +136,7 @@ Partial Class Form4
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(245, 51)
-        Me.TextBox3.TabIndex = 4
+        Me.TextBox3.TabIndex = 2
         '
         'TextBox4
         '
@@ -151,7 +151,7 @@ Partial Class Form4
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(245, 51)
-        Me.TextBox4.TabIndex = 5
+        Me.TextBox4.TabIndex = 3
         '
         'TextBox5
         '
@@ -166,7 +166,7 @@ Partial Class Form4
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(245, 51)
-        Me.TextBox5.TabIndex = 6
+        Me.TextBox5.TabIndex = 4
         '
         'Button1
         '
@@ -179,7 +179,7 @@ Partial Class Form4
         Me.Button1.MinimumSize = New System.Drawing.Size(195, 51)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(245, 51)
-        Me.Button1.TabIndex = 7
+        Me.Button1.TabIndex = 5
         Me.Button1.Text = "Add"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -194,7 +194,7 @@ Partial Class Form4
         Me.Button2.MinimumSize = New System.Drawing.Size(195, 51)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(245, 51)
-        Me.Button2.TabIndex = 8
+        Me.Button2.TabIndex = 6
         Me.Button2.Text = "Update"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -209,7 +209,7 @@ Partial Class Form4
         Me.Button3.MinimumSize = New System.Drawing.Size(195, 51)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(245, 51)
-        Me.Button3.TabIndex = 9
+        Me.Button3.TabIndex = 7
         Me.Button3.Text = "Delete"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -291,7 +291,7 @@ Partial Class Form4
         Me.Button6.MinimumSize = New System.Drawing.Size(195, 51)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(245, 51)
-        Me.Button6.TabIndex = 17
+        Me.Button6.TabIndex = 8
         Me.Button6.Text = "Clear All"
         Me.Button6.UseVisualStyleBackColor = True
         '
@@ -322,7 +322,7 @@ Partial Class Form4
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(245, 51)
-        Me.TextBox1.TabIndex = 19
+        Me.TextBox1.TabIndex = 0
         '
         'Label7
         '
@@ -362,7 +362,7 @@ Partial Class Form4
         Me.Button7.MinimumSize = New System.Drawing.Size(195, 51)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(245, 51)
-        Me.Button7.TabIndex = 23
+        Me.Button7.TabIndex = 9
         Me.Button7.Text = "Show all Rows"
         Me.Button7.UseVisualStyleBackColor = True
         '
@@ -377,7 +377,7 @@ Partial Class Form4
         Me.ComboBox1.Location = New System.Drawing.Point(1181, 187)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(245, 48)
-        Me.ComboBox1.TabIndex = 37
+        Me.ComboBox1.TabIndex = 10
         '
         'PictureBox1
         '
@@ -423,6 +423,7 @@ Partial Class Form4
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.Name = "Form4"
         Me.Text = "Medicine Inventory Manager"
