@@ -94,9 +94,6 @@ Public Class Form1
             SendKeys.Send("{TAB}")
         End If
     End Sub
-    'My new Canges to EasyMED Test
-    'My branch change test
-    'Brand new branch text made to ensure that the branch is working and no cross over is happening
-    'my branch push to main
+    'checking main is seperate to branch commits
 
 End Class
