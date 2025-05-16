@@ -166,7 +166,8 @@ Public Class Form10
             Label6.Text = total.ToString
             con.Close()
         End If
-
+        ctg = ""
+        quant = 0
     End Sub
 
 
